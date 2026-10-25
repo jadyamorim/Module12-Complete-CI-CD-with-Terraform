@@ -2,8 +2,8 @@
 
 library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
   [$class: 'GitSCMSource',
-  remote: 'https://gitlab.com/twn-devops-bootcamp/latest/12-terraform/jenkins-shared-library.git',
-  credentialsId: 'gitlab-credentials'
+  remote: 'https://github.com/jadyamorim/Module8-jenkins-shared-library.git',
+  credentialsId: 'github-credentials'
   ]
 )
 
@@ -13,7 +13,7 @@ pipeline {
     maven 'Maven'
   }
   environment {
-    IMAGE_NAME = 'nanatwn/demo-app:java-maven-2.0'
+    IMAGE_NAME = 'jadyamorim/demo-app:java-maven-2.0'
   }
   stages {
     stage("build app") {
